@@ -1,10 +1,8 @@
+/* k&r C */
 #include <stdio.h>
 
 int main()
 {
-// adding a comment
-// °C  x  9/5 + 32 = °F
-
 // (°F  -  32)  x  5/9 = °C
 
 	float fahr, celsius;
@@ -22,13 +20,15 @@ int main()
 		printf("%30f\t%61f\n", fahr, celsius);
 		fahr = fahr + step;
 	}
-	fahr = lower;
 
-printf("----------------------farenheit----------------------------------------------------celsius------\n");
+/* f to c*/
+	celsius = lower;
+printf("----------------------celsius----------------------------------------------------farenheit------\n");
+// °C  x  9/5 + 32 = °F
 	printf("\n");
-	while (fahr <= upper) {
-		celsius = 5 * (fahr-32) / 9;
-		printf("%30f\t%61f\n", fahr, celsius);
-		fahr = fahr + step;
+	while (celsius <= upper) {
+		fahr = (celsius * 9/5) + 32;
+		printf("%30f\t%61f\n", celsius, fahr);
+		celsius = celsius + step;
 	}
 }

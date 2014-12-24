@@ -1,3 +1,5 @@
+/* count_words.c */
+/* from the make book end of chap 1 */
 #include <stdio.h>
 #include <stdlib.h>
 
