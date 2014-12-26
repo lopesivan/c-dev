@@ -19,16 +19,24 @@ int main()
     loop_end = 100;
     loop_inc = 1;
 
-	for (int i = loop_start; i < loop_end; ++i)
+	for (int loop_inc = loop_start; loop_inc < loop_end; ++loop_inc)
 	{
 		/* code */
-		if ( i % 3 == 0 )
+		if ( loop_inc % 3 == 0 && loop_inc % 5 == 0)
 	    {
-	        printf("Fizz\n");
+	        printf( "%8s\n", "FizzBuzz" );
+	    }
+		else if ( loop_inc % 3 == 0 )
+	    {
+	        printf( "%8s\n", "Fizz" );
+	    }
+	    else if(loop_inc % 5 == 0)
+	    {
+	        printf( "%8s\n", "Buzz" );
 	    }
 	    else
 	    {
-		printf("%30i\n", i);	    	
+		printf("%8i\n", loop_inc);	    	
 	    }
 	}
 
